@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Corn Disease Detection</string>
+    <string name="titulo_info_app">¿Qué es Corn Disease Detection?</string>
+    <string name="descripcion_info_app">Es una aplicación inteligente basada en Aprendizaje Profundo que propone ayudar en la identificación de enfermedades en las hojas de cultivos de maíz a través de la cámara de tu celular.</string>
+    <string name="btnIniciarPros">Iniciar proceso</string>
+    <string name="btnCaptImg">Capturar imágen</string>
+    <string name="btnSalir">Salir</string>
+    <string name="titulo_enfer_iden">Enfermedad identificada</string>
+    <string name="titulo_info_adic">Información adicional</string>
+    <string name="btnDetectarEnfer">Detectar enfermedad</string>
 </resources>

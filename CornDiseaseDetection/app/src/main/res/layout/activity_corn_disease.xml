@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CornDiseaseActivity"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/mrgApp">
+
+    <ImageView
+        android:id="@+id/imgDeCamara"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/btnSecundary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mrgApp"
+        android:text="@string/titulo_enfer_iden"
+        android:textSize="18dp"
+        android:fontFamily="@font/roboto_bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtEnfermedad_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:text="Probabilidad #1"/>
+        <TextView
+            android:id="@+id/txtProbabilidad_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="0%"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtEnfermedad_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Probabilidad #2"
+            android:textColor="#868686"/>
+        <TextView
+            android:id="@+id/txtProbabilidad_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="#868686"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtEnfermedad_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Probabilidad #3"
+            android:textColor="#868686"/>
+        <TextView
+            android:id="@+id/txtProbabilidad_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="#868686"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtEnfermedad_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Probabilidad #4"
+            android:textColor="#868686"/>
+        <TextView
+            android:id="@+id/txtProbabilidad_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="#868686"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mrgApp"
+        android:text="@string/titulo_info_adic"
+        android:textSize="18dp"
+        android:fontFamily="@font/roboto_bold"/>
+
+    <TextView
+        android:id="@+id/txtInfoAdicional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Por implementar"
+        android:textSize="16dp"/>
+
+    <Button
+        android:id="@+id/btnCapturarImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mrgApp"
+        android:background="@drawable/shape_btn_primary"
+        android:text="@string/btnCaptImg"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btnDetectarEnfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mrgApp"
+        android:background="@drawable/shape_btn_secundary"
+        app:backgroundTint="@null"
+        android:text="@string/btnDetectarEnfer"
+        android:textAllCaps="false"/>
+</LinearLayout>
