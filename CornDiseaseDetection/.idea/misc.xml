@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ingenieria de Software/9no Semestre/Sistemas inteligentes/Proyecto - EnfermedadesDelMaiz/CornDiseaseDetection/app/src/main/res/font/roboto.xml" value="0.1175925925925926" />
+        <entry key="..\:/Ingenieria de Software/9no Semestre/Sistemas inteligentes/Proyecto - EnfermedadesDelMaiz/CornDiseaseDetection/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Ingenieria de Software/9no Semestre/Sistemas inteligentes/Proyecto - EnfermedadesDelMaiz/CornDiseaseDetection/app/src/main/res/layout/activity_welcome.xml" value="0.33" />
         <entry key="..\:/Users/Sebastian Carvajal/AndroidStudioProjects/PROYECTOS-POOMOVILES/CornDiseaseDetection/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
       </map>
     </option>
