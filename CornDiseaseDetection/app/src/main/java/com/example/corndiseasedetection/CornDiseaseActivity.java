@@ -4,11 +4,17 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -21,14 +27,17 @@ import com.example.corndiseasedetection.ml.Model;
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.text.DecimalFormat;
 
 public class CornDiseaseActivity extends AppCompatActivity {
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    private Button btnCapturarImg, btnDetectarEnf;
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private static final int REQUEST_SELECT_FILE = 2;
+    private Button btnCapturarImg, btnSubirImg, btnDetectarEnf ;
     private ImageView imgCamara;
     private TextView txtEnfer_1, txtProb_1;
     private TextView txtEnfer_2, txtProb_2;
@@ -38,14 +47,16 @@ public class CornDiseaseActivity extends AppCompatActivity {
     private ActivityResultLauncher<Intent> mStartForResult;
     private int imageSize = 224;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_corn_disease);
-        this.registrarActivityResult();
+        //this.registrarActivityResult();
 
         btnCapturarImg = findViewById(R.id.btnCapturarImg);
         btnDetectarEnf = findViewById(R.id.btnDetectarEnfer);
+        btnSubirImg = findViewById(R.id.btnCargarImg);
         imgCamara = findViewById(R.id.imgDeCamara);
 
         txtEnfer_1 = findViewById(R.id.txtEnfermedad_1);
@@ -61,14 +72,39 @@ public class CornDiseaseActivity extends AppCompatActivity {
         txtProb_4 = findViewById(R.id.txtProbabilidad_4);
 
         btnCapturarImg.setOnClickListener(btnAbrirCapturaImg);
+        btnSubirImg.setOnClickListener(btnAbrirSubirImg);
         btnDetectarEnf.setOnClickListener(btnIniciarDetectorEnf);
     }
 
     private View.OnClickListener btnAbrirCapturaImg = new View.OnClickListener() {
+        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            mStartForResult.launch(intent);
+            if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE);
+            } else {
+                //Request camera permission if we don't have it.
+                requestPermissions(new String[]{Manifest.permission.CAMERA}, 100);
+            }
+            //Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            //mStartForResult.launch(intent);
+        }
+    };
+
+    private View.OnClickListener btnAbrirSubirImg = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent();
+            intent.setType("image/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            startActivityForResult(
+                    Intent.createChooser(intent, "Seleccione una imagen"),
+                    REQUEST_SELECT_FILE);
+            //mStartForResult.launch(intent);
+
+            //Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            //mStartForResult1.launch(intent);
         }
     };
 
@@ -78,6 +114,56 @@ public class CornDiseaseActivity extends AppCompatActivity {
             classifyImage(imageBitmap);
         }
     };
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
+        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+        Uri selectedImageUri = null;
+        Uri selectedImage;
+
+        String filePath = null;
+        switch (requestCode) {
+            case REQUEST_SELECT_FILE:
+                if (resultCode == CornDiseaseActivity.RESULT_OK) {
+                    selectedImage = imageReturnedIntent.getData();
+                    String selectedPath = selectedImage.getPath();
+                    if (requestCode == REQUEST_SELECT_FILE) {
+
+                        if (selectedPath != null) {
+                            InputStream imageStream = null;
+                            try {
+                                imageStream = getContentResolver().openInputStream(selectedImage);
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            // Transformamos la URI de la imagen a inputStream y este a un Bitmap
+                            imageBitmap = BitmapFactory.decodeStream(imageStream);
+                            // Ponemos nuestro bitmap en un ImageView que tengamos en la vista
+                            //imageView.setImageBitmap(imageBitmap);
+                            //imagenCargada = true;
+
+                            int dimension = Math.min(imageBitmap.getWidth(), imageBitmap.getHeight());
+                            imageBitmap = ThumbnailUtils.extractThumbnail(imageBitmap, dimension, dimension);
+                            imgCamara.setImageBitmap(imageBitmap);
+                            imageBitmap = Bitmap.createScaledBitmap(imageBitmap, imageSize, imageSize, false);
+                        }
+                    }
+                }
+
+                break;
+
+            case REQUEST_IMAGE_CAPTURE:
+                if(resultCode == CornDiseaseActivity.RESULT_OK){
+                    imageBitmap = (Bitmap) imageReturnedIntent.getExtras().get("data");
+                    int dimension = Math.min(imageBitmap.getWidth(), imageBitmap.getHeight());
+                    imageBitmap = ThumbnailUtils.extractThumbnail(imageBitmap, dimension, dimension);
+                    imgCamara.setImageBitmap(imageBitmap);
+                    imageBitmap = Bitmap.createScaledBitmap(imageBitmap, imageSize, imageSize,false);
+                }
+
+                break;
+
+        }
+    }
 
     public void classifyImage(Bitmap image){
         try {
