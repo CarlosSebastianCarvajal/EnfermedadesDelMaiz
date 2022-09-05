@@ -55,7 +55,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
         //this.registrarActivityResult();
 
         btnCapturarImg = findViewById(R.id.btnCapturarImg);
-        btnDetectarEnf = findViewById(R.id.btnDetectarEnfer);
+        //btnDetectarEnf = findViewById(R.id.btnDetectarEnfer);
         btnSubirImg = findViewById(R.id.btnCargarImg);
         imgCamara = findViewById(R.id.imgDeCamara);
 
@@ -73,7 +73,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
 
         btnCapturarImg.setOnClickListener(btnAbrirCapturaImg);
         btnSubirImg.setOnClickListener(btnAbrirSubirImg);
-        btnDetectarEnf.setOnClickListener(btnIniciarDetectorEnf);
+        //btnDetectarEnf.setOnClickListener(btnIniciarDetectorEnf);
     }
 
     private View.OnClickListener btnAbrirCapturaImg = new View.OnClickListener() {
@@ -145,6 +145,8 @@ public class CornDiseaseActivity extends AppCompatActivity {
                             imageBitmap = ThumbnailUtils.extractThumbnail(imageBitmap, dimension, dimension);
                             imgCamara.setImageBitmap(imageBitmap);
                             imageBitmap = Bitmap.createScaledBitmap(imageBitmap, imageSize, imageSize, false);
+
+                            classifyImage(imageBitmap);
                         }
                     }
                 }
@@ -158,6 +160,8 @@ public class CornDiseaseActivity extends AppCompatActivity {
                     imageBitmap = ThumbnailUtils.extractThumbnail(imageBitmap, dimension, dimension);
                     imgCamara.setImageBitmap(imageBitmap);
                     imageBitmap = Bitmap.createScaledBitmap(imageBitmap, imageSize, imageSize,false);
+
+                    classifyImage(imageBitmap);
                 }
 
                 break;
