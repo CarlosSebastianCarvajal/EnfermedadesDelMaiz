@@ -25,15 +25,21 @@ import android.widget.Toast;
 
 import com.example.corndiseasedetection.ml.Model;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.jar.Attributes;
 
 public class CornDiseaseActivity extends AppCompatActivity {
@@ -45,6 +51,12 @@ public class CornDiseaseActivity extends AppCompatActivity {
     private TextView txtEnfer_2, txtProb_2;
     private TextView txtEnfer_3, txtProb_3;
     private TextView txtEnfer_4, txtProb_4;
+    private TextView txtEnfer_5, txtProb_5;
+    private TextView txtEnfer_6, txtProb_6;
+    private TextView txtEnfer_7, txtProb_7;
+    private TextView txtEnfer_8, txtProb_8;
+    private TextView txtEnfer_9, txtProb_9;
+    private TextView txtEnfer_10, txtProb_10;
     private TextView txtInfoAd, txtVermas;
     private Bitmap imageBitmap;
     private ActivityResultLauncher<Intent> mStartForResult;
@@ -73,6 +85,24 @@ public class CornDiseaseActivity extends AppCompatActivity {
 
         txtEnfer_4 = findViewById(R.id.txtEnfermedad_4);
         txtProb_4 = findViewById(R.id.txtProbabilidad_4);
+
+        txtEnfer_5 = findViewById(R.id.txtEnfermedad_5);
+        txtProb_5 = findViewById(R.id.txtProbabilidad_5);
+
+        txtEnfer_6 = findViewById(R.id.txtEnfermedad_6);
+        txtProb_6 = findViewById(R.id.txtProbabilidad_6);
+
+        txtEnfer_7 = findViewById(R.id.txtEnfermedad_7);
+        txtProb_7 = findViewById(R.id.txtProbabilidad_7);
+
+        txtEnfer_8 = findViewById(R.id.txtEnfermedad_8);
+        txtProb_8 = findViewById(R.id.txtProbabilidad_8);
+
+        txtEnfer_9 = findViewById(R.id.txtEnfermedad_9);
+        txtProb_9 = findViewById(R.id.txtProbabilidad_9);
+
+        txtEnfer_10 = findViewById(R.id.txtEnfermedad_10);
+        txtProb_10 = findViewById(R.id.txtProbabilidad_10);
 
         txtInfoAd = findViewById(R.id.txtInfoAd);
         txtVermas = findViewById(R.id.txtVermas);
@@ -214,7 +244,17 @@ public class CornDiseaseActivity extends AppCompatActivity {
             Model.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
-            String[] classes = {"Manchas", "Royas", "Tizón", "Sanas"};
+            String[] classes = {"Tizón de la hoja por antracnosis",
+                                "Roya común",
+                                "Tizón de la hoja del norte",
+                                "Mancha foliar por Phaeosphaeria",
+                                "Fisoderma mancha marron",
+                                "Tizón de la hoja del sur",
+                                "Roya del maíz del sur",
+                                "Roya tropical",
+                                "Sana",
+                                "Objeto"};
+            int[] ids = {0,1,2,3,4,5,6,7,8,9};
             float[] confidences = outputFeature0.getFloatArray();
 
             for (int x = 0; x < confidences.length; x++){
@@ -227,6 +267,10 @@ public class CornDiseaseActivity extends AppCompatActivity {
                         String c_temp = classes[i + 1];
                         classes[i + 1] = classes[i];
                         classes[i] = c_temp;
+
+                        int i_temp = ids[i + 1];
+                        ids[i + 1] = ids[i];
+                        ids[i] = i_temp;
                     }
                 }
             }
@@ -243,6 +287,24 @@ public class CornDiseaseActivity extends AppCompatActivity {
             txtEnfer_4.setText(classes[3]);
             txtProb_4.setText(formatear(confidences[3]) + "%");
 
+            txtEnfer_5.setText(classes[4]);
+            txtProb_5.setText(formatear(confidences[4]) + "%");
+
+            txtEnfer_6.setText(classes[5]);
+            txtProb_6.setText(formatear(confidences[5]) + "%");
+
+            txtEnfer_7.setText(classes[6]);
+            txtProb_7.setText(formatear(confidences[6]) + "%");
+
+            txtEnfer_8.setText(classes[7]);
+            txtProb_8.setText(formatear(confidences[7]) + "%");
+
+            txtEnfer_9.setText(classes[8]);
+            txtProb_9.setText(formatear(confidences[8]) + "%");
+
+            txtEnfer_10.setText(classes[9]);
+            txtProb_10.setText(formatear(confidences[9]) + "%");
+
             //txtalpha2Code = classes[maxPos];
             /*String s = "";
             for(int i = 0; i < classes.length; i++){
@@ -253,9 +315,51 @@ public class CornDiseaseActivity extends AppCompatActivity {
             model.close();
 
             //txtInfoAd.setText(R.string.InfoEjemplo);
-            txtVermas.setVisibility(View.VISIBLE);
-        } catch (IOException e) {}
+
+            mostrarInfo(ids[0]);
+            if(ids[0] != 8 && ids[0] != 9){
+                txtVermas.setVisibility(View.VISIBLE);    
+            }
+        } catch (IOException | JSONException e) {}
     }
+
+    private void mostrarInfo(int id) throws IOException, JSONException {
+        /*
+        for(int i = 0; i < 10 ; i++){
+            txtInfoAd.setText(String.valueOf(id));
+        }*/
+
+        String jsonFileContent = readFile("maize_information.json");
+        JSONArray jsonArray = new JSONArray(jsonFileContent);
+        //List<Person> persons = new ArrayList<>();
+        for (int i=0;i<jsonArray.length();i++)
+        {
+            JSONObject jsonObj = jsonArray.getJSONObject(i);
+            Integer idjs = jsonObj.getInt("id");
+            if(id == idjs){
+                String descripcion = jsonObj.getString("descripcion");
+                txtInfoAd.setText(descripcion);
+            }
+            //String name = jsonObj.getString("name");
+            //String phone = jsonObj.getString("phone");
+            //persons.add(new Person(id , name , phone));
+        }
+    }
+
+    public String readFile(String fileName) throws IOException
+    {
+        BufferedReader reader = null;
+        reader = new BufferedReader(new InputStreamReader(getAssets().open(fileName), "UTF-8"));
+        String content = "";
+        String line;
+        while ((line = reader.readLine()) != null)
+        {
+            content = content + line;
+        }
+        return content;
+    }
+
+
 
     private String formatear(float valor){
         valor = valor *100;
