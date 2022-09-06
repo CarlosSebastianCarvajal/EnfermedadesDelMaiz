@@ -45,7 +45,7 @@ import java.util.jar.Attributes;
 public class CornDiseaseActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int REQUEST_SELECT_FILE = 2;
-    private Button btnCapturarImg, btnSubirImg, btnDetectarEnf ;
+    private Button btnCapturarImg, btnSubirImg;
     private ImageView imgCamara;
     private TextView txtEnfer_1, txtProb_1;
     private TextView txtEnfer_2, txtProb_2;
@@ -70,7 +70,6 @@ public class CornDiseaseActivity extends AppCompatActivity {
         //this.registrarActivityResult();
 
         btnCapturarImg = findViewById(R.id.btnCapturarImg);
-        //btnDetectarEnf = findViewById(R.id.btnDetectarEnfer);
         btnSubirImg = findViewById(R.id.btnCargarImg);
         imgCamara = findViewById(R.id.imgDeCamara);
 
@@ -109,18 +108,16 @@ public class CornDiseaseActivity extends AppCompatActivity {
 
         btnCapturarImg.setOnClickListener(btnAbrirCapturaImg);
         btnSubirImg.setOnClickListener(btnAbrirSubirImg);
-
         txtVermas.setOnClickListener(txtVermasEnlace);
 
         txtVermas.setVisibility(View.INVISIBLE);
-        //btnDetectarEnf.setOnClickListener(btnIniciarDetectorEnf);
     }
 
     private View.OnClickListener txtVermasEnlace = new View.OnClickListener(){
         @Override
         public void onClick(View view) {
             //Aqui debe enviar al Activity con toda la informacion...
-            Toast.makeText(CornDiseaseActivity.this, "Se va", Toast.LENGTH_LONG).show();
+            Toast.makeText(CornDiseaseActivity.this, "Se debe ir al otro activity", Toast.LENGTH_LONG).show();
         }
     };
 
@@ -314,9 +311,6 @@ public class CornDiseaseActivity extends AppCompatActivity {
             // Releases model resources if no longer used.
             model.close();
 
-            //txtInfoAd.setText(R.string.InfoEjemplo);
-
-            
             mostrarInfo(ids[0]);
             if(ids[0] != 8 && ids[0] != 9){
                 txtVermas.setVisibility(View.VISIBLE);    
@@ -325,11 +319,6 @@ public class CornDiseaseActivity extends AppCompatActivity {
     }
 
     private void mostrarInfo(int id) throws IOException, JSONException {
-        /*
-        for(int i = 0; i < 10 ; i++){
-            txtInfoAd.setText(String.valueOf(id));
-        }*/
-
         String jsonFileContent = readFile("maize_information.json");
         JSONArray jsonArray = new JSONArray(jsonFileContent);
         //List<Person> persons = new ArrayList<>();
@@ -341,14 +330,10 @@ public class CornDiseaseActivity extends AppCompatActivity {
                 String descripcion = jsonObj.getString("descripcion");
                 txtInfoAd.setText(descripcion);
             }
-            //String name = jsonObj.getString("name");
-            //String phone = jsonObj.getString("phone");
-            //persons.add(new Person(id , name , phone));
         }
     }
 
-    public String readFile(String fileName) throws IOException
-    {
+    public String readFile(String fileName) throws IOException {
         BufferedReader reader = null;
         reader = new BufferedReader(new InputStreamReader(getAssets().open(fileName), "UTF-8"));
         String content = "";
