@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/imgDeCamara"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:background="@color/btnSecundary" />
 
     <TextView
@@ -20,16 +20,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgDeCamara"
-        android:layout_marginTop="@dimen/mrgApp"
+        android:layout_marginTop="@dimen/mrgApp1"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/titulo_enfer_iden"
-        android:textSize="18dp" />
+        android:textSize="17dp" />
 
     <LinearLayout
         android:id="@+id/LL1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:layout_below="@+id/txtTitle">
         <TextView
@@ -37,20 +37,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="16dp"
+            android:textSize="15dp"
             android:text="Probabilidad #1"/>
         <TextView
             android:id="@+id/txtProbabilidad_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="15dp"
             android:text="0%"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/LL2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_below="@+id/LL1">
         <TextView
@@ -241,23 +240,54 @@
         android:id="@+id/txtTitle2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mrgApp"
-        android:text="@string/titulo_info_adic"
-        android:textSize="18dp"
+        android:layout_above="@+id/svInfo"
+        android:layout_marginTop="@dimen/mrgApp1"
         android:fontFamily="@font/roboto_bold"
-        android:layout_below="@+id/LL10"/>
+        android:text="@string/titulo_info_adic"
+        android:textSize="17dp" />
 
-    <TextView
-        android:id="@+id/txtInfoAdicional"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Información de la enfermedad....."
-        android:textSize="16dp"
-        android:layout_below="@+id/txtTitle2"/>
+
+
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="75dp"
+            android:layout_above="@+id/clBotones"
+            android:id="@+id/svInfo"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtInfoAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textoInfo"
+                    />
+
+
+                <TextView
+                    android:id="@+id/txtVermas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textoVerMas"
+                    android:textColor="#2232D1"
+                    />
+
+            </LinearLayout>
+
+
+        </ScrollView>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBotones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/mrgApp"

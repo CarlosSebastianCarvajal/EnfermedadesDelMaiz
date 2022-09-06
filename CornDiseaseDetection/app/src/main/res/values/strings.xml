@@ -9,4 +9,8 @@
     <string name="titulo_enfer_iden">Enfermedad identificada</string>
     <string name="titulo_info_adic">Información adicional</string>
     <string name="btnDetectarEnfer">Detectar enfermedad</string>
+    <string name="textoVerMas"><u>Más Información</u></string>
+    <string name="textoInfo">Seleccione imagen para obtener información...</string>
+
+    <string name="InfoEjemplo">La enfermedad está presente en ambientes cálidos y húmedos de todo el mundo, con una fase de enfermedad foliar y una fase de pudrición del tallo. No se informa que la fase de infección foliar del hongo tenga importancia económica en el maíz. El daño más severo es causado por la fase de pudrición del tallo. El daño foliar se puede observar en diferentes etapas del desarrollo de la planta. En la etapa inicial de plántula, las hojas muestran lesiones irregulares, de ovales a alargadas, con márgenes característicos de amarillo a marrón rojizo. En etapas posteriores del desarrollo de la planta, se pueden observar lesiones similares en las hojas superiores de las plantas infectadas, especialmente en aquellas donde ya se han desarrollado síntomas de pudrición del tallo.</string>
 </resources>

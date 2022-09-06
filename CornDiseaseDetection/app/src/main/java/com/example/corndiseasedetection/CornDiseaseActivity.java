@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.corndiseasedetection.ml.Model;
 
@@ -33,6 +34,7 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.text.DecimalFormat;
+import java.util.jar.Attributes;
 
 public class CornDiseaseActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -43,6 +45,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
     private TextView txtEnfer_2, txtProb_2;
     private TextView txtEnfer_3, txtProb_3;
     private TextView txtEnfer_4, txtProb_4;
+    private TextView txtInfoAd, txtVermas;
     private Bitmap imageBitmap;
     private ActivityResultLauncher<Intent> mStartForResult;
     private int imageSize = 224;
@@ -71,10 +74,25 @@ public class CornDiseaseActivity extends AppCompatActivity {
         txtEnfer_4 = findViewById(R.id.txtEnfermedad_4);
         txtProb_4 = findViewById(R.id.txtProbabilidad_4);
 
+        txtInfoAd = findViewById(R.id.txtInfoAd);
+        txtVermas = findViewById(R.id.txtVermas);
+
         btnCapturarImg.setOnClickListener(btnAbrirCapturaImg);
         btnSubirImg.setOnClickListener(btnAbrirSubirImg);
+
+        txtVermas.setOnClickListener(txtVermasEnlace);
+
+        txtVermas.setVisibility(View.INVISIBLE);
         //btnDetectarEnf.setOnClickListener(btnIniciarDetectorEnf);
     }
+
+    private View.OnClickListener txtVermasEnlace = new View.OnClickListener(){
+        @Override
+        public void onClick(View view) {
+            //Aqui debe enviar al Activity con toda la informacion...
+            Toast.makeText(CornDiseaseActivity.this, "Se va", Toast.LENGTH_LONG).show();
+        }
+    };
 
     private View.OnClickListener btnAbrirCapturaImg = new View.OnClickListener() {
         @RequiresApi(api = Build.VERSION_CODES.M)
@@ -233,6 +251,8 @@ public class CornDiseaseActivity extends AppCompatActivity {
             ///confidence.setText(s);
             // Releases model resources if no longer used.
             model.close();
+
+            txtVermas.setVisibility(View.VISIBLE);
         } catch (IOException e) {}
     }
 
