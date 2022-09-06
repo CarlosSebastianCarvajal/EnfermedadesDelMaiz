@@ -316,6 +316,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
 
             //txtInfoAd.setText(R.string.InfoEjemplo);
 
+            
             mostrarInfo(ids[0]);
             if(ids[0] != 8 && ids[0] != 9){
                 txtVermas.setVisibility(View.VISIBLE);    

@@ -52,8 +52,8 @@
     "descripcion": "Esta enfermedad se encuentra en Brasil, Colombia, Ecuador, norte de India, este y sur de África, Estados Unidos y México, donde también prevalece Exserohilum turcicum. Las condiciones de alta humedad y temperaturas nocturnas relativamente bajas favorecen el desarrollo. Las lesiones aparecen como pequeñas áreas de color verde pálido, que luego se blanquean y finalmente se necrosan, rodeadas de márgenes de color marrón oscuro. Las manchas en las hojas son redondas o ligeramente alargadas.",
     "nombre_fuente": "Maize disease: A guide for field identification",
     "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "mas_informacion": "MAIZE DISEASES: Phaeosphaeria leaf spot",
+    "enlace_02": "https://www.plantwise.org/FullTextPDF/2011/20117800336.pdf"
   },
   {
     "id": 4,
@@ -66,22 +66,22 @@
     "descripcion": "La enfermedad normalmente ocurre en áreas de alta precipitación y altas temperaturas medias. Ataca las hojas, las vainas de las hojas, los tallos y, a veces, las cáscaras externas. Los primeros síntomas perceptibles se desarrollan en las láminas de las hojas y consisten en pequeñas manchas cloróticas, dispuestas como bandas alternas de tejido sano y enfermo. Las manchas en las costillas medias son circulares y de color marrón oscuro, mientras que las lesiones en las láminas continúan como manchas cloróticas. Los nudos y entrenudos también muestran lesiones marrones. En infecciones graves, estos pueden unirse e inducir la pudrición y el acame del tallo.",
     "nombre_fuente": "Maize disease: A guide for field identification",
     "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "mas_informacion": "Physoderma Brown Spot of Corn",
+    "enlace_02": "http://plantpathology.ca.uky.edu/files/ppfs-ag-c-07.pdf"
   },
   {
     "id": 5,
     "nombre_imagen": "img_clase_5",
     "nombre_enfermedad": "Tizón de la hoja del sur",
     "nombre_ingles": "Maydis leaf blight",
-    "otros_nombres": "No definido",
+    "otros_nombres": "Southren leaf blight",
     "telomorfo": "Cochliobolus heterostrophus",
     "anamorfo": "Bipolaris maydis",
     "descripcion": "Las lesiones jóvenes son pequeñas y en forma de diamante. A medida que maduran, se alargan. El crecimiento está limitado por las venas adyacentes, por lo que la forma final de la lesión es rectangular y de 2 a 3 cm de largo. Las lesiones pueden coalescer, produciendo una quemadura completa de grandes áreas de las hojas. Los síntomas descritos anteriormente corresponden a la cepa “O” del hongo. A principios de la década de 1970, la cepa “T” causó graves daños a los cultivares de maíz en los que se había incorporado la fuente de esterilidad masculina de Texas. Las lesiones producidas por la cepa T son ovaladas y más grandes que las producidas por la cepa O. Una diferencia importante es que la cepa T afecta las cáscaras y las vainas de las hojas, mientras que la cepa O normalmente no lo hace. El tizón de la hoja de Maydis (o tizón de la hoja del maíz del sur) prevalece en áreas cálidas y húmedas de cultivo de maíz. El hongo requiere temperaturas ligeramente más altas para la infección que E. turcicum; sin embargo, ambas especies se encuentran a menudo en la misma planta.",
     "nombre_fuente": "Maize disease: A guide for field identification",
     "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "mas_informacion": "PIONNER: Southren leaf blight",
+    "enlace_02": "https://www.pioneer.com/us/agronomy/southern_leaf_blight_cropfocus.html"
   },
   {
     "id": 6,
@@ -94,8 +94,8 @@
     "descripcion": "Las pústulas son más pequeñas, de color más claro (naranja claro) y más circulares que las producidas por P. sorghi. También están presentes en ambas superficies de las hojas, pero la epidermis permanece intacta por más tiempo que en las hojas infectadas con P. sorghi. Las pústulas se vuelven de color marrón oscuro a medida que las plantas se acercan a la madurez. No se conoce ningún huésped alternativo del hongo. La roya polisora (u roya del sur) es común en las tierras bajas tropicales cálidas y húmedas.",
     "nombre_fuente": "Maize disease: A guide for field identification",
     "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "mas_informacion": "MAIZE DISEASES: Polysora rust",
+    "enlace_02": "https://www.plantwise.org/FullTextPDF/2011/20117800337.pdf"
   },
   {
     "id": 7,
@@ -108,8 +108,8 @@
     "descripcion": "Los brotes de esta roya son esporádicos y se limitan a los trópicos americanos. Las pústulas varían en forma de redondas a ovaladas. Son pequeños y se encuentran debajo de la epidermis. En el centro de la pústula, la lesión aparece de color blanco a amarillo pálido y se desarrolla una abertura. La pústula a veces tiene un borde negro, pero su centro permanece claro. No se conoce ningún huésped alternativo del hongo.",
     "nombre_fuente": "Maize disease: A guide for field identification",
     "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "mas_informacion": "Plantix: Tropical Rust",
+    "enlace_02": "https://plantix.net/en/library/plant-diseases/100101/tropical-rust"
   },
   {
     "id": 8,
@@ -136,7 +136,7 @@
     "descripcion": "La imagen capturada al parecer es un objeto distinto a una hoja de maíz. Este resultado es mostrado como una forma de validación para evitar que la aplicación muestre una enfermedad foliar en un objeto que no es hoja.",
     "nombre_fuente": "Maize disease: A guide for field identification",
     "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "mas_informacion": "ImageNet Object Localization Challenge",
+    "enlace_02": "https://www.kaggle.com/competitions/imagenet-object-localization-challenge/data?select=imagenet_object_localization_patched2019.tar.gz"
   }
 ]
