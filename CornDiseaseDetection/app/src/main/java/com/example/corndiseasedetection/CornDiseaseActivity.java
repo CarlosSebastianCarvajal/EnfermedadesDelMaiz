@@ -1,9 +1,6 @@
 package com.example.corndiseasedetection;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,8 +36,6 @@ import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.jar.Attributes;
 
 public class CornDiseaseActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -62,6 +57,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
     private ActivityResultLauncher<Intent> mStartForResult;
     private int imageSize = 224;
 
+    private int id_class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +113,9 @@ public class CornDiseaseActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             //Aqui debe enviar al Activity con toda la informacion...
+            // Utilizar la variable id_class para pasar como parametro el ID a la otra activity
+
+
             Toast.makeText(CornDiseaseActivity.this, "Se debe ir al otro activity", Toast.LENGTH_LONG).show();
         }
     };
@@ -310,27 +309,12 @@ public class CornDiseaseActivity extends AppCompatActivity {
             ///confidence.setText(s);
             // Releases model resources if no longer used.
             model.close();
-
-            mostrarInfo(ids[0]);
-            if(ids[0] != 8 && ids[0] != 9){
+            id_class = ids[0];
+            extraerInfoJson(id_class);
+            //if(ids[0] != 8 && ids[0] != 9){
                 txtVermas.setVisibility(View.VISIBLE);    
-            }
+            //}
         } catch (IOException | JSONException e) {}
-    }
-
-    private void mostrarInfo(int id) throws IOException, JSONException {
-        String jsonFileContent = readFile("maize_information.json");
-        JSONArray jsonArray = new JSONArray(jsonFileContent);
-        //List<Person> persons = new ArrayList<>();
-        for (int i=0;i<jsonArray.length();i++)
-        {
-            JSONObject jsonObj = jsonArray.getJSONObject(i);
-            Integer idjs = jsonObj.getInt("id");
-            if(id == idjs){
-                String descripcion = jsonObj.getString("descripcion");
-                txtInfoAd.setText(descripcion);
-            }
-        }
     }
 
     public String readFile(String fileName) throws IOException {
@@ -345,6 +329,20 @@ public class CornDiseaseActivity extends AppCompatActivity {
         return content;
     }
 
+    private void extraerInfoJson(int id) throws IOException, JSONException {
+        String jsonFileContent = readFile("maize_information.json");
+        JSONArray jsonArray = new JSONArray(jsonFileContent);
+        //List<Person> persons = new ArrayList<>();
+        for (int i=0;i<jsonArray.length();i++)
+        {
+            JSONObject jsonObj = jsonArray.getJSONObject(i);
+            Integer idjs = jsonObj.getInt("id");
+            if(id == idjs){
+                String descripcion = jsonObj.getString("descripcion");
+                txtInfoAd.setText(descripcion);
+            }
+        }
+    }
 
 
     private String formatear(float valor){
