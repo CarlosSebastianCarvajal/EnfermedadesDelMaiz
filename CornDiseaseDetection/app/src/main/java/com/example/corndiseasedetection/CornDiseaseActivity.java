@@ -252,6 +252,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
             // Releases model resources if no longer used.
             model.close();
 
+            //txtInfoAd.setText(R.string.InfoEjemplo);
             txtVermas.setVisibility(View.VISIBLE);
         } catch (IOException e) {}
     }
@@ -262,7 +263,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
         format.setMaximumFractionDigits(2); //Define 2 decimales.
         return format.format(valor);
     }
-
+    /*
     private void registrarActivityResult(){
         mStartForResult = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -280,5 +281,5 @@ public class CornDiseaseActivity extends AppCompatActivity {
                     }
                 }
         );
-    }
+    }*/
 }
