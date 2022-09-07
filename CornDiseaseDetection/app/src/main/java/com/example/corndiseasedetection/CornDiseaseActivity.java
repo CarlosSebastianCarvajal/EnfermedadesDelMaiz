@@ -112,11 +112,13 @@ public class CornDiseaseActivity extends AppCompatActivity {
     private View.OnClickListener txtVermasEnlace = new View.OnClickListener(){
         @Override
         public void onClick(View view) {
-            //Aqui debe enviar al Activity con toda la informacion...
-            // Utilizar la variable id_class para pasar como parametro el ID a la otra activity
-
-
-            Toast.makeText(CornDiseaseActivity.this, "Se debe ir al otro activity", Toast.LENGTH_LONG).show();
+            Bundle extras = new Bundle();
+            extras.putInt("codigo",id_class);
+            Intent intent;
+            intent = new Intent(getApplicationContext(),
+                    InformationActivity.class);
+            intent.putExtras(extras);
+            startActivity(intent);
         }
     };
 
