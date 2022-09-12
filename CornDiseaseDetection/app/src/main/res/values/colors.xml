@@ -7,11 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="link">#155EB6</color>
 
     <!--Colores de la app-->
     <color name="app_font">#202020</color>
-    <color name="app_background">#ffffff</color>
+    <color name="app_background">#f0f1f2</color>
 
     <color name="btnPrimary">#40A06B</color>
     <color name="btnSecundary">#4B514E</color>

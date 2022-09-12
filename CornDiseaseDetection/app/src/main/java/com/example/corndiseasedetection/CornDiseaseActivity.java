@@ -47,17 +47,12 @@ public class CornDiseaseActivity extends AppCompatActivity {
     private TextView txtEnfer_3, txtProb_3;
     private TextView txtEnfer_4, txtProb_4;
     private TextView txtEnfer_5, txtProb_5;
-    private TextView txtEnfer_6, txtProb_6;
-    private TextView txtEnfer_7, txtProb_7;
-    private TextView txtEnfer_8, txtProb_8;
-    private TextView txtEnfer_9, txtProb_9;
-    private TextView txtEnfer_10, txtProb_10;
-    private TextView txtInfoAd, txtVermas;
+    private TextView txtInfoAd, txtMasInformacion;
     private Bitmap imageBitmap;
     private ActivityResultLauncher<Intent> mStartForResult;
     private int imageSize = 224;
 
-    private int id_class;
+    private int id_class_mayor_precision;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,36 +79,21 @@ public class CornDiseaseActivity extends AppCompatActivity {
         txtEnfer_5 = findViewById(R.id.txtEnfermedad_5);
         txtProb_5 = findViewById(R.id.txtProbabilidad_5);
 
-        txtEnfer_6 = findViewById(R.id.txtEnfermedad_6);
-        txtProb_6 = findViewById(R.id.txtProbabilidad_6);
-
-        txtEnfer_7 = findViewById(R.id.txtEnfermedad_7);
-        txtProb_7 = findViewById(R.id.txtProbabilidad_7);
-
-        txtEnfer_8 = findViewById(R.id.txtEnfermedad_8);
-        txtProb_8 = findViewById(R.id.txtProbabilidad_8);
-
-        txtEnfer_9 = findViewById(R.id.txtEnfermedad_9);
-        txtProb_9 = findViewById(R.id.txtProbabilidad_9);
-
-        txtEnfer_10 = findViewById(R.id.txtEnfermedad_10);
-        txtProb_10 = findViewById(R.id.txtProbabilidad_10);
-
         txtInfoAd = findViewById(R.id.txtInfoAd);
-        txtVermas = findViewById(R.id.txtVermas);
+        txtMasInformacion = findViewById(R.id.txtMasInformacion);
 
         btnCapturarImg.setOnClickListener(btnAbrirCapturaImg);
         btnSubirImg.setOnClickListener(btnAbrirSubirImg);
-        txtVermas.setOnClickListener(txtVermasEnlace);
+        txtMasInformacion.setOnClickListener(txtVermasEnlace);
 
-        txtVermas.setVisibility(View.INVISIBLE);
+        txtMasInformacion.setVisibility(View.INVISIBLE);
     }
 
     private View.OnClickListener txtVermasEnlace = new View.OnClickListener(){
         @Override
         public void onClick(View view) {
             Bundle extras = new Bundle();
-            extras.putInt("codigo",id_class);
+            extras.putInt("id_class", id_class_mayor_precision);
             Intent intent;
             intent = new Intent(getApplicationContext(),
                     InformationActivity.class);
@@ -147,10 +127,8 @@ public class CornDiseaseActivity extends AppCompatActivity {
             startActivityForResult(
                     Intent.createChooser(intent, "Seleccione una imagen"),
                     REQUEST_SELECT_FILE);
-            //mStartForResult.launch(intent);
-
             //Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            //mStartForResult1.launch(intent);
+            //mStartForResult.launch(intent);
         }
     };
 
@@ -196,9 +174,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
                         }
                     }
                 }
-
                 break;
-
             case REQUEST_IMAGE_CAPTURE:
                 if(resultCode == CornDiseaseActivity.RESULT_OK){
                     imageBitmap = (Bitmap) imageReturnedIntent.getExtras().get("data");
@@ -209,19 +185,17 @@ public class CornDiseaseActivity extends AppCompatActivity {
 
                     classifyImage(imageBitmap);
                 }
-
                 break;
-
         }
     }
 
     public void classifyImage(Bitmap image){
         try {
+            Toast.makeText(this, "Clasificando imagen", Toast.LENGTH_SHORT).show();
             Model model = Model.newInstance(getApplicationContext());
 
-            // Creates inputs for reference.
-            //inputFeature0.loadBuffer(byteBuffer);
-            TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
+            // Creates inputs for referen
+            TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, imageSize, imageSize, 3}, DataType.FLOAT32);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4* imageSize* imageSize * 3);
             byteBuffer.order(ByteOrder.nativeOrder());
 
@@ -242,36 +216,14 @@ public class CornDiseaseActivity extends AppCompatActivity {
             Model.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
-            String[] classes = {"Tizón de la hoja por antracnosis",
-                                "Roya común",
+            String[] classes = {"Roya común",
                                 "Tizón de la hoja del norte",
-                                "Mancha foliar por Phaeosphaeria",
-                                "Fisoderma mancha marron",
-                                "Tizón de la hoja del sur",
-                                "Roya del maíz del sur",
-                                "Roya tropical",
-                                "Sana",
-                                "Objeto"};
-            int[] ids = {0,1,2,3,4,5,6,7,8,9};
+                                "Mancha gris de la hoja",
+                                "Saludable",
+                                "Otra planta"};
+
+            int[] ids = {0,1,2,3,4};
             float[] confidences = outputFeature0.getFloatArray();
-
-            for (int x = 0; x < confidences.length; x++){
-                for (int i = 0; i < confidences.length -x -1; i++){
-                    if( confidences[i] < confidences[i + 1]){
-                        float f_temp = confidences[i + 1];
-                        confidences[i + 1] = confidences[i];
-                        confidences[i] = f_temp;
-
-                        String c_temp = classes[i + 1];
-                        classes[i + 1] = classes[i];
-                        classes[i] = c_temp;
-
-                        int i_temp = ids[i + 1];
-                        ids[i + 1] = ids[i];
-                        ids[i] = i_temp;
-                    }
-                }
-            }
 
             txtEnfer_1.setText(classes[0]);
             txtProb_1.setText(formatear(confidences[0]) + "%");
@@ -288,35 +240,19 @@ public class CornDiseaseActivity extends AppCompatActivity {
             txtEnfer_5.setText(classes[4]);
             txtProb_5.setText(formatear(confidences[4]) + "%");
 
-            txtEnfer_6.setText(classes[5]);
-            txtProb_6.setText(formatear(confidences[5]) + "%");
-
-            txtEnfer_7.setText(classes[6]);
-            txtProb_7.setText(formatear(confidences[6]) + "%");
-
-            txtEnfer_8.setText(classes[7]);
-            txtProb_8.setText(formatear(confidences[7]) + "%");
-
-            txtEnfer_9.setText(classes[8]);
-            txtProb_9.setText(formatear(confidences[8]) + "%");
-
-            txtEnfer_10.setText(classes[9]);
-            txtProb_10.setText(formatear(confidences[9]) + "%");
-
-            //txtalpha2Code = classes[maxPos];
-            /*String s = "";
-            for(int i = 0; i < classes.length; i++){
-                s += String.format("%s: %.1f%%\n", classes[i], confidences[i] *100);
-            }*/
-            ///confidence.setText(s);
-            // Releases model resources if no longer used.
             model.close();
-            id_class = ids[0];
-            extraerInfoJson(id_class);
-            //if(ids[0] != 8 && ids[0] != 9){
-                txtVermas.setVisibility(View.VISIBLE);    
-            //}
-        } catch (IOException | JSONException e) {}
+
+            float temp = 0;
+            for (int i = 0; i < classes.length; i++){
+                if (temp < confidences[i]){
+                    temp = confidences[i];
+                    id_class_mayor_precision = i;
+                }
+            }
+            extraerInfoJson(id_class_mayor_precision);
+            txtMasInformacion.setVisibility(View.VISIBLE);
+        }
+        catch (IOException | JSONException e) {}
     }
 
     public String readFile(String fileName) throws IOException {
@@ -334,7 +270,7 @@ public class CornDiseaseActivity extends AppCompatActivity {
     private void extraerInfoJson(int id) throws IOException, JSONException {
         String jsonFileContent = readFile("maize_information.json");
         JSONArray jsonArray = new JSONArray(jsonFileContent);
-        //List<Person> persons = new ArrayList<>();
+
         for (int i=0;i<jsonArray.length();i++)
         {
             JSONObject jsonObj = jsonArray.getJSONObject(i);
@@ -345,7 +281,6 @@ public class CornDiseaseActivity extends AppCompatActivity {
             }
         }
     }
-
 
     private String formatear(float valor){
         valor = valor *100;

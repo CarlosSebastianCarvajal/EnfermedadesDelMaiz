@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fontAppName">22sp</dimen>
-    <dimen name="textSize14">14sp</dimen>
-    <dimen name="textTitle">18sp</dimen>
-    <dimen name="textDescr">16sp</dimen>
+    <dimen name="fontAppName">26sp</dimen>
+    <dimen name="textSizeApp">17sp</dimen>
+    <dimen name="textTitleSuper">22sp</dimen>
+    <dimen name="textTitle">20sp</dimen>
+    <dimen name="textDescr">18sp</dimen>
 
 
     <dimen name="mrgApp">15dp</dimen>
     <dimen name="mrgApp1">13dp</dimen>
 
     <dimen name="mrgTopTitle">20dp</dimen>
-    <dimen name="mrgTopDescr">10dp</dimen>
+    <dimen name="mrgTopDescr">12dp</dimen>
+
+    <dimen name="tmClasImg">120dp</dimen>
 </resources>

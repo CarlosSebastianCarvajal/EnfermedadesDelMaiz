@@ -18,7 +18,7 @@
         <!-- Status bar color. -->
 
         <item name="android:fontFamily">@font/roboto</item>
-        <item name="android:textSize">@dimen/textSize14</item>
+        <item name="android:textSize">@dimen/textSizeApp</item>
         <item name="android:textColor">@color/app_font</item>
 
         <item name="android:colorBackground">@color/app_background</item> <!--Color para el fondo-->

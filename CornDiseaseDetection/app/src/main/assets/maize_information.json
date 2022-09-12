@@ -1,142 +1,132 @@
 [
   {
     "id": 0,
-    "nombre_imagen": "img_clase_0",
-    "nombre_enfermedad": "Tizón de la hoja por antracnosis",
-    "nombre_ingles": "Anthracnose leaf blight",
-    "otros_nombres": "No definido",
-    "telomorfo": "Glomerella graminicola",
-    "anamorfo": "Colletotrichum graminicola",
-    "descripcion": "La enfermedad está presente en ambientes cálidos y húmedos de todo el mundo, con una fase de enfermedad foliar y una fase de pudrición del tallo. No se informa que la fase de infección foliar del hongo tenga importancia económica en el maíz. El daño más severo es causado por la fase de pudrición del tallo. El daño foliar se puede observar en diferentes etapas del desarrollo de la planta. En la etapa inicial de plántula, las hojas muestran lesiones irregulares, de ovales a alargadas, con márgenes característicos de amarillo a marrón rojizo. En etapas posteriores del desarrollo de la planta, se pueden observar lesiones similares en las hojas superiores de las plantas infectadas, especialmente en aquellas donde ya se han desarrollado síntomas de pudrición del tallo.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
-  },
-  {
-    "id": 1,
-    "nombre_imagen": "img_clase_1",
+    "nombre_imagen": ["img_class_0_0", "img_class_0_1", "img_class_0_2"],
     "nombre_enfermedad": "Roya común",
     "nombre_ingles": "Common rust",
     "otros_nombres": "Puccinia sorghi",
-    "telomorfo": "No definido",
+    "teleomorfo": "No definido",
     "anamorfo": "No definido",
     "descripcion": "La enfermedad se encuentra en todo el mundo en ambientes subtropicales, templados y de tierras altas con alta humedad. La roya común es más notoria cuando las plantas se acercan a la formación de panojas. Puede reconocerse por pequeñas pústulas alargadas y pulverulentas sobre ambas superficies de las hojas. Las pústulas son de color marrón oscuro en las primeras etapas de la infección; más tarde, la epidermis se rompe y las lesiones se vuelven negras a medida que la planta madura. Las plantas del hospedero alterno (Oxalis spp.) frecuentemente se infectan con pústulas de color anaranjado claro. Esta es simplemente otra etapa del mismo hongo.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "sintomas": ["Pústulas ovaladas o alargadas de color marrón canela en las superficies superior e inferior de las hojas; las pústulas se rompen y liberan esporas rojas pulverulentas; las pústulas se vuelven de color marrón oscuro a negro a medida que maduran y liberan esporas pulverulentas de color marrón oscuro; si la infección es grave, pueden aparecer pústulas en las espigas y las mazorcas y las hojas pueden comenzar a ponerse amarillas; en los híbridos de maíz parcialmente resistentes, los síntomas aparecen como manchas cloróticas o necróticas en las hojas que liberan poca o ninguna espora."],
+    "causa": "Hongo",
+    "comentarios": "La enfermedad se transmite por esporas transportadas por el viento; algunas de las variedades de maíz dulce más populares tienen poca o ninguna resistencia a la enfermedad.",
+    "administracion": "El método más efectivo para controlar la enfermedad es plantar híbridos resistentes; la aplicación de fungicidas apropiados puede proporcionar cierto grado de control y reducir la gravedad de la enfermedad; los fungicidas son más efectivos cuando la cantidad de inóculo secundario aún es baja, generalmente cuando las plantas solo tienen unas pocas pústulas de roya por hoja.",
+    "fuentes": [
+      {
+        "id": 0,
+        "titulo_fuente": "Maize disease: A guide for field identification",
+        "enlace": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf"
+      },
+      {
+        "id": 1,
+        "titulo_fuente": "PlantVillage: Maize (corn)",
+        "enlace": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+      }
+    ]
   },
   {
-    "id": 2,
-    "nombre_imagen": "img_clase_2",
+    "id": 1,
+    "nombre_imagen": ["img_class_1_0", "img_class_1_1", "img_class_1_2"],
     "nombre_enfermedad": "Tizón de la hoja del norte",
     "nombre_ingles": "Northern leaf blight",
     "otros_nombres": "Turcicum leaf blight",
-    "telomorfo": "Setosphaeria turcica",
+    "teleomorfo": "Setosphaeria turcica",
     "anamorfo": "Exserohilum turcicum",
     "descripcion": "Un síntoma temprano son las pequeñas manchas empapadas de agua, ligeramente ovaladas y fácilmente reconocibles que se producen en las hojas. Estos crecen hasta convertirse en lesiones necróticas alargadas y en forma de huso. Pueden aparecer primero en las hojas inferiores y aumentar en número a medida que la planta se desarrolla, y pueden provocar la quema completa del follaje. El tizón de la hoja por Turcicum (o tizón de la hoja del norte) ocurre en todo el mundo y particularmente en áreas donde prevalecen una alta humedad y temperaturas moderadas durante la temporada de crecimiento. Cuando la infección ocurre antes y durante la formación de estigmas y las condiciones son óptimas, puede causar un daño económico significativo.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "sintomas": ["Al principio notaremos lesiones elípticas de color verde grisáceo en las hojas. A medida que avanza la enfermedad, estas lesiones se vuelven de color gris pálido a bronceado. En una etapa posterior, las lesiones se ven sucias debido a las esporas de color gris oscuro, particularmente debajo de la superficie inferior de la hoja. La enfermedad se puede identificar fácilmente en el campo debido a sus lesiones largas y estrechas que no están restringidas por venas."],
+    "causa": "Hongo",
+    "comentarios": "La enfermedad se propaga principalmente a través de las salpicaduras de lluvia y el viento.",
+    "administracion": "Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.Siga la labranza adecuada para reducir el inóculo de hongos de los restos de cultivos. Siga la rotación de cultivos con cultivos no hospedantes. Cultive las variedades resistentes disponibles. En caso severo de incidencia de la enfermedad aplicar fungicida adecuado.",
+    "fuentes": [
+      {
+        "id": 0,
+        "titulo_fuente": "Maize disease: A guide for field identification",
+        "enlace": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf"
+      },
+      {
+        "id": 1,
+        "titulo_fuente": "PlantVillage: Maize (corn)",
+        "enlace": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre_imagen": ["img_class_2_0", "img_class_2_1", "img_class_2_2"],
+    "nombre_enfermedad": "Mancha gris de la hoja",
+    "nombre_ingles": "Gray leaf spot",
+    "otros_nombres": "Cercospora leaf spot",
+    "teleomorfo": "No definido",
+    "anamorfo": "Cercospora zeae-maydis",
+    "descripcion": "Esta enfermedad se encuentra en Brasil, Colombia, Ecuador, norte de India, este y sur de África, Estados Unidos y México, donde también prevalece Exserohilum turcicum. Las condiciones de alta humedad y temperaturas nocturnas relativamente bajas favorecen el desarrollo. Las lesiones aparecen como pequeñas áreas de color verde pálido, que luego se blanquean y finalmente se necrosan, rodeadas de márgenes de color marrón oscuro. Las manchas en las hojas son redondas o ligeramente alargadas.",
+    "sintomas": ["Pequeñas manchas necróticas con halos cloróticos en las hojas que se expanden a lesiones rectangulares de 1-6 cm de largo y 2-4 mm de ancho; a medida que las lesiones maduran se vuelven de color canela y finalmente grises; las lesiones tienen bordes afilados y paralelos y son opacas; la enfermedad puede desarrollarse rápidamente causando el marchitamiento completo de las hojas y la muerte de la planta.", "1. Manchas marrones con anillos amarillos en toda la hoja durante el período de crecimiento de la yuca", "2. Lesiones de 0,15-0,2 cm de diámetro", "3. Los casos graves pueden provocar agujeros a lo largo de las lesiones en la hoja."],
+    "causa": "Hongo",
+    "comentarios": "La bacteria causa la enfermedad de las encías en la caña de azúcar en varias partes del mundo. Reportado por primera vez sobre el maíz en Sudáfrica. Actualmente, esta enfermedad se informa en Nebraska (26 de agosto de 2016), Colorado, Illinois, Iowa y Kansas en el maíz.",
+    "administracion": "Plantar híbridos de maíz con resistencia a la enfermedad; la rotación de cultivos y el arado de escombros en el suelo pueden reducir los niveles de inóculo en el suelo, pero es posible que no controlen las áreas donde prevalece la enfermedad; los fungicidas foliares pueden ser económicamente viables para algunos híbridos susceptibles de alto rendimiento.",
+    "fuentes": [
+      {
+        "id": 0,
+        "titulo_fuente": "Maize disease: A guide for field identification",
+        "enlace": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf"
+      },
+      {
+        "id": 1,
+        "titulo_fuente": "PlantVillage: Maize (corn)",
+        "enlace": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+      }
+    ]
   },
   {
     "id": 3,
-    "nombre_imagen": "img_clase_3",
-    "nombre_enfermedad": "Mancha foliar por Phaeosphaeria",
-    "nombre_ingles": "Phaeosphaeria leaf spot",
-    "otros_nombres": "Phaeosphaeria maydis",
-    "telomorfo": "No definido",
-    "anamorfo": "No definido",
-    "descripcion": "Esta enfermedad se encuentra en Brasil, Colombia, Ecuador, norte de India, este y sur de África, Estados Unidos y México, donde también prevalece Exserohilum turcicum. Las condiciones de alta humedad y temperaturas nocturnas relativamente bajas favorecen el desarrollo. Las lesiones aparecen como pequeñas áreas de color verde pálido, que luego se blanquean y finalmente se necrosan, rodeadas de márgenes de color marrón oscuro. Las manchas en las hojas son redondas o ligeramente alargadas.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "MAIZE DISEASES: Phaeosphaeria leaf spot",
-    "enlace_02": "https://www.plantwise.org/FullTextPDF/2011/20117800336.pdf"
-  },
-  {
-    "id": 4,
-    "nombre_imagen": "img_clase_4",
-    "nombre_enfermedad": "Mancha marrón",
-    "nombre_ingles": "Brown spot",
-    "otros_nombres": "Physoderma maydis",
-    "telomorfo": "No definido",
-    "anamorfo": "No definido",
-    "descripcion": "La enfermedad normalmente ocurre en áreas de alta precipitación y altas temperaturas medias. Ataca las hojas, las vainas de las hojas, los tallos y, a veces, las cáscaras externas. Los primeros síntomas perceptibles se desarrollan en las láminas de las hojas y consisten en pequeñas manchas cloróticas, dispuestas como bandas alternas de tejido sano y enfermo. Las manchas en las costillas medias son circulares y de color marrón oscuro, mientras que las lesiones en las láminas continúan como manchas cloróticas. Los nudos y entrenudos también muestran lesiones marrones. En infecciones graves, estos pueden unirse e inducir la pudrición y el acame del tallo.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "Physoderma Brown Spot of Corn",
-    "enlace_02": "http://plantpathology.ca.uky.edu/files/ppfs-ag-c-07.pdf"
-  },
-  {
-    "id": 5,
-    "nombre_imagen": "img_clase_5",
-    "nombre_enfermedad": "Tizón de la hoja del sur",
-    "nombre_ingles": "Maydis leaf blight",
-    "otros_nombres": "Southren leaf blight",
-    "telomorfo": "Cochliobolus heterostrophus",
-    "anamorfo": "Bipolaris maydis",
-    "descripcion": "Las lesiones jóvenes son pequeñas y en forma de diamante. A medida que maduran, se alargan. El crecimiento está limitado por las venas adyacentes, por lo que la forma final de la lesión es rectangular y de 2 a 3 cm de largo. Las lesiones pueden coalescer, produciendo una quemadura completa de grandes áreas de las hojas. Los síntomas descritos anteriormente corresponden a la cepa “O” del hongo. A principios de la década de 1970, la cepa “T” causó graves daños a los cultivares de maíz en los que se había incorporado la fuente de esterilidad masculina de Texas. Las lesiones producidas por la cepa T son ovaladas y más grandes que las producidas por la cepa O. Una diferencia importante es que la cepa T afecta las cáscaras y las vainas de las hojas, mientras que la cepa O normalmente no lo hace. El tizón de la hoja de Maydis (o tizón de la hoja del maíz del sur) prevalece en áreas cálidas y húmedas de cultivo de maíz. El hongo requiere temperaturas ligeramente más altas para la infección que E. turcicum; sin embargo, ambas especies se encuentran a menudo en la misma planta.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PIONNER: Southren leaf blight",
-    "enlace_02": "https://www.pioneer.com/us/agronomy/southern_leaf_blight_cropfocus.html"
-  },
-  {
-    "id": 6,
-    "nombre_imagen": "img_clase_6",
-    "nombre_enfermedad": "Roya del maíz del sur",
-    "nombre_ingles": "Polysora rust",
-    "otros_nombres": "Puccinia polysora",
-    "telomorfo": "No definido",
-    "anamorfo": "No definido",
-    "descripcion": "Las pústulas son más pequeñas, de color más claro (naranja claro) y más circulares que las producidas por P. sorghi. También están presentes en ambas superficies de las hojas, pero la epidermis permanece intacta por más tiempo que en las hojas infectadas con P. sorghi. Las pústulas se vuelven de color marrón oscuro a medida que las plantas se acercan a la madurez. No se conoce ningún huésped alternativo del hongo. La roya polisora (u roya del sur) es común en las tierras bajas tropicales cálidas y húmedas.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "MAIZE DISEASES: Polysora rust",
-    "enlace_02": "https://www.plantwise.org/FullTextPDF/2011/20117800337.pdf"
-  },
-  {
-    "id": 7,
-    "nombre_imagen": "img_clase_7",
-    "nombre_enfermedad": "Roya tropical",
-    "nombre_ingles": "Tropical rust",
-    "otros_nombres": "Physopella zeae",
-    "telomorfo": "No definido",
-    "anamorfo": "No definido",
-    "descripcion": "Los brotes de esta roya son esporádicos y se limitan a los trópicos americanos. Las pústulas varían en forma de redondas a ovaladas. Son pequeños y se encuentran debajo de la epidermis. En el centro de la pústula, la lesión aparece de color blanco a amarillo pálido y se desarrolla una abertura. La pústula a veces tiene un borde negro, pero su centro permanece claro. No se conoce ningún huésped alternativo del hongo.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "Plantix: Tropical Rust",
-    "enlace_02": "https://plantix.net/en/library/plant-diseases/100101/tropical-rust"
-  },
-  {
-    "id": 8,
-    "nombre_imagen": "img_clase_8",
+    "nombre_imagen": ["img_class_3_0", "img_class_3_1", "img_class_3_2"],
     "nombre_enfermedad": "Hoja sana",
     "nombre_ingles": "Healthy leaf",
     "otros_nombres": "Zea mays",
-    "telomorfo": "Ninguno",
+    "teleomorfo": "Ninguno",
     "anamorfo": "Ninguno",
-    "descripcion": "El maíz, Zea mays, es una hierba anual en la familia Poaceae y es un cultivo alimenticio básico que se cultiva en todo el mundo. La planta de maíz posee un tallo simple de nudos y entrenudos. Un par de hojas grandes se extienden fuera de cada entrenudo y las hojas suman un total de 8 a 21 por planta. Las hojas son lineales o lanceoladas (en forma de lanza) con una costilla media obvia (vena primaria) y pueden crecer de 30 a 100 cm (11.8–39.4 pulgadas) de longitud.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "PlantVillage: Maize (corn)",
-    "enlace_02": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+    "descripcion": "El maíz, Zea mays, es una hierba anual de la familia Poaceae y es un cultivo alimentario básico que se cultiva en todo el mundo. La planta de maíz posee un tallo simple de nudos y entrenudos. Un par de hojas grandes se extienden fuera de cada entrenudo y las hojas suman 8-21 por planta. Las hojas son lineales o lanceoladas (en forma de lanza) con una nervadura central obvia (nervio primario) y pueden crecer de 30 a 100 cm (11,8 a 39,4 pulgadas) de largo. Las inflorescencias masculina y femenina (región de la planta donde se encuentran las flores) se colocan por separado en la planta. La inflorescencia masculina se conoce como 'borla', mientras que la inflorescencia femenina es la 'oreja'. La mazorca del maíz es una espiga modificada y puede haber de 1 a 3 por planta. Los granos de maíz, o 'núcleos', están envueltos en cáscaras y suman entre 30 y 1000 por mazorca. Los granos pueden ser blancos, amarillos, rojos, morados o negros. El maíz es una planta anual que sobrevive solo durante una temporada de crecimiento y puede alcanzar de 2 a 3 m (7 a 10 pies) de altura. El maíz también puede denominarse maíz o maíz indio y se cree que es originario de México y América Central.",
+    "sintomas": [""],
+    "causa": "",
+    "comentarios": "",
+    "administracion": "",
+    "fuentes": [
+      {
+        "id": 0,
+        "titulo_fuente": "Maize disease: A guide for field identification",
+        "enlace": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf"
+      },
+      {
+        "id": 1,
+        "titulo_fuente": "PlantVillage: Maize (corn)",
+        "enlace": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+      }
+    ]
   },
   {
-    "id": 9,
-    "nombre_imagen": "img_clase_9",
-    "nombre_enfermedad": "Objeto diferente a una hoja",
+    "id": 4,
+    "nombre_imagen": ["img_class_4_0", "img_class_4_1", "img_class_4_2"],
+    "nombre_enfermedad": "Otra planta",
     "nombre_ingles": "Object other than a leaf",
     "otros_nombres": "No definido",
-    "telomorfo": "Ninguno",
+    "teleomorfo": "Ninguno",
     "anamorfo": "Ninguno",
     "descripcion": "La imagen capturada al parecer es un objeto distinto a una hoja de maíz. Este resultado es mostrado como una forma de validación para evitar que la aplicación muestre una enfermedad foliar en un objeto que no es hoja.",
-    "nombre_fuente": "Maize disease: A guide for field identification",
-    "enlace_01": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf",
-    "mas_informacion": "ImageNet Object Localization Challenge",
-    "enlace_02": "https://www.kaggle.com/competitions/imagenet-object-localization-challenge/data?select=imagenet_object_localization_patched2019.tar.gz"
+    "sintomas": [""],
+    "causa": "",
+    "comentarios": "",
+    "administracion": "",
+    "fuentes": [
+      {
+        "id": 0,
+        "titulo_fuente": "Maize disease: A guide for field identification",
+        "enlace": "https://www.aflatoxinpartnership.org/wp-content/uploads/2021/05/MAIZE-DISEASES-PDF.pdf"
+      },
+      {
+        "id": 1,
+        "titulo_fuente": "PlantVillage: Maize (corn)",
+        "enlace": "https://plantvillage.psu.edu/topics/corn-maize/infos"
+      }
+    ]
   }
 ]

@@ -37,7 +37,7 @@
                 android:layout_marginTop="@dimen/mrgApp1"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/titulo_enfer_iden"
-                android:textSize="17dp" />
+                android:textSize="@dimen/textTitle" />
 
             <LinearLayout
                 android:id="@+id/LL1"
@@ -51,15 +51,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Probabilidad #1"
-                    android:textSize="15dp" />
+                    android:text="Roya común"/>
 
                 <TextView
                     android:id="@+id/txtProbabilidad_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textSize="15dp" />
+                    android:text="0%"/>
             </LinearLayout>
 
             <LinearLayout
@@ -73,15 +71,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Probabilidad #2"
-                    android:textColor="#868686" />
+                    android:text="Tizón de la hoja del norte"/>
 
                 <TextView
                     android:id="@+id/txtProbabilidad_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
+                    android:text="0%"/>
             </LinearLayout>
 
             <LinearLayout
@@ -95,15 +91,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Probabilidad #3"
-                    android:textColor="#868686" />
+                    android:text="Mancha gris de la hoja"/>
 
                 <TextView
                     android:id="@+id/txtProbabilidad_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
+                    android:text="0%"/>
             </LinearLayout>
 
 
@@ -118,15 +112,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Probabilidad #4"
-                    android:textColor="#868686" />
+                    android:text="Hoja sana"/>
 
                 <TextView
                     android:id="@+id/txtProbabilidad_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
+                    android:text="0%"/>
             </LinearLayout>
 
 
@@ -141,125 +133,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Probabilidad #5"
-                    android:textColor="#868686" />
+                    android:text="Otro cultivo"/>
 
                 <TextView
                     android:id="@+id/txtProbabilidad_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LL6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtEnfermedad_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Probabilidad #6"
-                    android:textColor="#868686" />
-
-                <TextView
-                    android:id="@+id/txtProbabilidad_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LL7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtEnfermedad_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Probabilidad #7"
-                    android:textColor="#868686" />
-
-                <TextView
-                    android:id="@+id/txtProbabilidad_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LL8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtEnfermedad_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Probabilidad #8"
-                    android:textColor="#868686" />
-
-                <TextView
-                    android:id="@+id/txtProbabilidad_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LL9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtEnfermedad_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Probabilidad #9"
-                    android:textColor="#868686" />
-
-                <TextView
-                    android:id="@+id/txtProbabilidad_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LL10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtEnfermedad_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Probabilidad #10"
-                    android:textColor="#868686" />
-
-                <TextView
-                    android:id="@+id/txtProbabilidad_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#868686" />
+                    android:text="0%"/>
             </LinearLayout>
 
             <TextView
@@ -269,7 +149,7 @@
                 android:layout_marginTop="@dimen/mrgApp1"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/titulo_info_adic"
-                android:textSize="17dp" />
+                android:textSize="@dimen/textTitle" />
 
             <TextView
                 android:id="@+id/txtInfoAd"
@@ -277,22 +157,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/textoInfo" />
 
-
             <TextView
-                android:id="@+id/txtVermas"
+                android:id="@+id/txtMasInformacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/textoVerMas"
                 android:textColor="#2232D1" />
-
         </LinearLayout>
 
-
     </ScrollView>
-
-
-
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clBotones"
@@ -300,7 +173,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/mrgApp"
         android:layout_alignParentBottom="true">
-
 
         <Button
             android:id="@+id/btnCapturarImg"
@@ -334,17 +206,4 @@
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--
-    <Button
-        android:id="@+id/btnDetectarEnfer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mrgApp"
-        android:background="@drawable/shape_btn_secundary"
-        app:backgroundTint="@null"
-        android:text="@string/btnDetectarEnfer"
-        android:textAllCaps="false"/>
-    -->
-
 </RelativeLayout>

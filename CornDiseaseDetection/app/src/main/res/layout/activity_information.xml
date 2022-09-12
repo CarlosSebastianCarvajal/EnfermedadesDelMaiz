@@ -1,199 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InformationActivity">
+    android:layout_margin="@dimen/mrgApp">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Otros nombres:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nomb_ingles" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".InformationActivity"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtNombreEnfermedad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título"
+            android:textSize="@dimen/textTitle"
+            android:fontFamily="@font/roboto_bold" />
 
-    <TextView
-        android:id="@+id/txt_otros_nombres"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_ClasImg_01"
+                android:layout_width="@dimen/tmClasImg"
+                android:layout_height="@dimen/tmClasImg"
+                android:src="@mipmap/ic_launcher"/>
+            <ImageView
+                android:id="@+id/img_ClasImg_02"
+                android:layout_width="@dimen/tmClasImg"
+                android:layout_height="@dimen/tmClasImg"
+                android:src="@mipmap/ic_launcher"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/img_ClasImg_03"
+                android:layout_width="@dimen/tmClasImg"
+                android:layout_height="@dimen/tmClasImg"
+                android:src="@mipmap/ic_launcher"/>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Telomorfo:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/txt_otros_nombres" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Nombre en inglés"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtNombreIngles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/txt_telomorfo"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Otros nombres"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtOtrosNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Anamorfo:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/txt_telomorfo" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Teleomorfo"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtTeleomorfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/txt_anamorfo"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Anamorfo"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtAnamorfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/txt_nomb_ingles"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Descripción:"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <ImageView
-        android:id="@+id/imageView_maiz"
-        android:layout_width="183dp"
-        android:layout_height="251dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="20dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Síntomas:"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtSintomas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/txt_nomb_enfermedad"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/roboto_bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Causas:"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtCausa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="182dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Nombre en Ingles:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_maiz"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nomb_enfermedad" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Comentarios"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtComentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="369dp"
-        android:layout_height="19dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Descripcion:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="275dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Administración:"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtAdministracion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxxxx"/>
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="369dp"
-        android:layout_height="19dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Informacion obtenida de:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="575dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Información optenida de:"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtFuente01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web|phone"
+            android:text="xxxxxxxxxx"
+            android:textColor="@color/link"/>
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="369dp"
-        android:layout_height="19dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Consultar mas enfermedades:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="630dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/txt_informacion_obt"
-        android:layout_width="369dp"
-        android:layout_height="19dp"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="602dp"
-        android:textColor="#2232D1"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/txt_cons_enfermedades"
-        android:layout_width="369dp"
-        android:layout_height="19dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="656dp"
-        android:textColor="#2232D1"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/txt_descripcion"
-        android:layout_width="367dp"
-        android:layout_height="244dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="300dp"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mrgTopDescr"
+            android:text="Otras fuentes:"
+            android:fontFamily="@font/roboto_bold" />
+        <TextView
+            android:id="@+id/txtFuente02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web|phone"
+            android:text="xxxxxxxxxx"
+            android:textColor="@color/link"/>
+    </LinearLayout>
+</ScrollView>
